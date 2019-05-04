@@ -6,6 +6,8 @@ public class PizzaTestDrive {
         Pizza pizza = nyStore.orderPizza("cheese");
         System.out.println("Ethan ordered a " + pizza.getName());
 
+        System.out.println("...");
+
         pizza = chicagoStore.orderPizza("cheese");
         System.out.println("Joel ordered a " + pizza.getName());
 
