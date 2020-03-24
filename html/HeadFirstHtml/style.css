@@ -15,5 +15,23 @@ h1 {
 }
 
 .newp1 {
-    color:cyan;
+    color:rgb(213, 71, 241);
+}
+
+#vim {
+    /* 书上属性 */
+    line-height: 1.6em;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #444444;
+    background-image: url(images/vim.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    /* 回忆起来的属性 */
+    background-color: #a7cece;
+    padding: 20px;
+    padding-left: 50px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: white;
 }
