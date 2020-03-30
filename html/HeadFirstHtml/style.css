@@ -37,3 +37,22 @@ h1 {
     border-width: 2px;
     border-color: white;
 }
+
+/* 无效 */
+a:link {
+    color: yellow;
+}
+a:hover {
+    color: #FA2;
+}
+/* 有效 */
+a:visited {
+    color: #0d0;
+}
+
+
+#right {
+    border: 1px solid red;
+    width: 300px;
+    float: right;
+}
