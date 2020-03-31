@@ -1,0 +1,24 @@
+set nu
+syn on
+
+"外观
+set guioptions-=T
+set guifont=Iosevka:h13
+color slate
+
+"tab默认8，不变为空格，不缩进
+set tabstop=4
+"set ts=4 和上面一样
+set expandtab
+set autoindent
+
+"默认是ANSI编码，打开其他utf8文件导致乱码
+set encoding=utf-8
+source $VIMRUNTIME/delmenu.vim
+source $VIMRUNTIME/menu.vim
+
+"BS删除键问题
+"去掉有关vi的一致性模式，避免之前版本的Bug
+set nocompatible
+"设置backspace的工作方式：
+set backspace=indent,eol,start
