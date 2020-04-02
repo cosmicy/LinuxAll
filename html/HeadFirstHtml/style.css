@@ -56,3 +56,13 @@ a:visited {
     width: 300px;
     float: right;
 }
+
+#main {
+    background-color: darkgray;
+    margin-right: 320px;
+}
+
+#footer {
+    background-color: coral;
+    clear: right;
+}
