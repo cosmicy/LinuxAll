@@ -11,11 +11,22 @@
         <p>show: {{message}}</p>
     </div>
 
+    <div id='hours'>
+        <p v-if="hours < 12">zaosh</p>
+        <p v-if="hours >= 12">wansh</p>
+    </div>
+
     <script>
         new Vue({
             el: '#app',
             data: {
                 message: 'hello vue'
+            }
+        })
+        new Vue({
+            el: '#hours',
+            data: {
+                hours : new Date().getHours()
             }
         })
     </script>
