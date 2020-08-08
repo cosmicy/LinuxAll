@@ -70,7 +70,7 @@
 
 <script>
     export default {
-        name: "BackTopOne"
+      name: "BackTopOne"
     }
 </script>
 
