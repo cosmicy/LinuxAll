@@ -2,7 +2,7 @@
   <div>
     <el-form :model="ruleForm" :rules="rules">
       <el-form-item prop="username">
-        <el-input placeholder="user" v-model="ruleForm.username" @input="update($event)">
+        <el-input placeholder="user" v-model="ruleForm.username">
           <i slot="prefix" class="el-icon-user"></i>
         </el-input>
       </el-form-item>
@@ -30,17 +30,6 @@ export default {
     rules: {
       type: Object,
       require: true
-    }
-  },
-  data() {
-    return {
-      ruleF: ''
-    }
-  },
-  methods: {
-    update(e) {
-      console.log(e)
-      this.$forceUpdate()
     }
   }
 }
