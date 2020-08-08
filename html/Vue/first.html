@@ -11,11 +11,36 @@
         <p>show: {{message}}</p>
     </div>
 
+    <div id='hours'>
+        <p v-if="hours < 12">上午</p>
+        <p v-if="hours >= 12">下午</p>
+    </div>
+    <div id='second'>
+        <p>已经过去了{{seconds}}秒</p>
+    </div>
+
     <script>
         new Vue({
             el: '#app',
             data: {
                 message: 'hello vue'
+            }
+        })
+        new Vue({
+            el: '#hours',
+            data: {
+                hours : new Date().getHours()
+            }
+        })
+        new Vue({
+            el: '#second',
+            data: {
+                seconds : 0
+            },
+            created() {
+                setInterval(()=>{
+                    this.seconds++;
+                },1000);
             }
         })
     </script>
