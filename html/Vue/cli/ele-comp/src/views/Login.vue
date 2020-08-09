@@ -6,7 +6,7 @@
     </div>
     <h1>短信</h1>
     <div class="phone">
-      <phoneLogin></phoneLogin>
+      <phoneLogin :rule-form="phoneForm" @sendCode="sendCode"></phoneLogin>
     </div>
   </div>
 </template>
@@ -49,6 +49,10 @@ name: "Login",
             trigger: 'blur'
           }
         ]
+      },
+      phoneForm: {
+        phone: '',
+        code: ''
       }
     }
   },
@@ -58,6 +62,9 @@ name: "Login",
     },
     errHandle() {
       this.$message.error("表单错误")
+    },
+    sendCode() {
+      this.$message.success("发送验证码")
     }
   }
 }
