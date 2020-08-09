@@ -2,7 +2,7 @@
   <div class="login">
     <h1>普通登录组件</h1>
     <div class="account">
-      <acc-login :ruleForm="ruleForm" :rules="rules"></acc-login>
+      <acc-login :ruleForm="ruleForm" :rules="rules" @submit="submit" @errHandle="errHandle"></acc-login>
     </div>
   </div>
 </template>
@@ -46,6 +46,14 @@ name: "Login",
           }
         ]
       }
+    }
+  },
+  methods: {
+    submit() {
+      this.$message.success("填写成功")
+    },
+    errHandle() {
+      this.$message.error("表单错误")
     }
   }
 }

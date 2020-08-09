@@ -31,6 +31,17 @@ export default {
       type: Object,
       require: true
     }
+  },
+  methods: {
+    login() {
+      this.$refs.ruleForm.validate((valid) => {
+        if(valid) {
+          this.$emit('submit')
+        } else {
+          this.$emit ('errHandle')
+        }
+      })
+    }
   }
 }
 </script>
