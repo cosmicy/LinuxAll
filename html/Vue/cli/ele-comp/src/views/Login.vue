@@ -4,6 +4,10 @@
     <div class="account">
       <acc-login :ruleForm="ruleForm" :rules="rules" @submit="submit" @errHandle="errHandle"></acc-login>
     </div>
+    <h1>短信</h1>
+    <div class="phone">
+      <phoneLogin></phoneLogin>
+    </div>
   </div>
 </template>
 
@@ -64,7 +68,7 @@ name: "Login",
   margin-top: 30px;
   margin-left: 30px;
 }
-.account {
+.account, .phone{
     width: 500px;
   }
 </style>
