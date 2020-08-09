@@ -6,7 +6,7 @@
     </div>
     <h1>短信</h1>
     <div class="phone">
-      <phoneLogin :rule-form="phoneForm" @sendCode="sendCode"></phoneLogin>
+      <phoneLogin :rule-form="phoneForm" count-down="30" @sendCode="sendCode" @submit="submit" @errHandle="errHandle"></phoneLogin>
     </div>
   </div>
 </template>
@@ -64,7 +64,7 @@ name: "Login",
       this.$message.error("表单错误")
     },
     sendCode() {
-      this.$message.success("发送验证码")
+      this.$message.info("发送验证码")
     }
   }
 }

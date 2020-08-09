@@ -8,7 +8,7 @@
             </el-form-item>
             <el-form-item prop="code">
                 <el-row :gutter="18">
-                    <el-col :span="18">
+                    <el-col :span="16">
                         <el-input placeholder="请输入验证码" v-model="ruleForm.code">
                             <i slot="prefix" class="el-icon-tickets"></i>
                         </el-input>
@@ -19,7 +19,7 @@
                 </el-row>
             </el-form-item>
             <el-form-item>
-                <el-button type="primary" style="width:100%">登录</el-button>
+                <el-button type="primary" style="width:100%" @click="phoneLogin">登录</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -90,6 +90,15 @@
                         }, 1000);
                         //发送验证码
                         this.$emit('sendCode')
+                    }
+                })
+            },
+            phoneLogin() {
+                this.$refs.ruleForm.validate((valid) => {
+                    if (valid) {
+                        this.$emit('submit')
+                    } else {
+                        this.$emit('errHandle')
                     }
                 })
             }
