@@ -16,6 +16,8 @@
 </template>
 
 <script>
+    import axios from 'axios'
+
     export default {
         name: "Book",
         components: {},
@@ -43,6 +45,9 @@
         },
         methods: {},
         mounted() {
+            axios.get('http://localhost:8181/book/findAll/').then((resp)=>{
+                console.log(resp)
+            })
         },
     }
 </script>
