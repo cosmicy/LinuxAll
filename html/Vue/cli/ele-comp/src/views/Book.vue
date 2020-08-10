@@ -45,8 +45,9 @@
         },
         methods: {},
         mounted() {
-            axios.get('http://localhost:8181/book/findAll/').then((resp)=>{
-                console.log(resp)
+            axios.get('http://localhost:8181/book/findAll/').then( resp => {
+                console.log(resp);
+                this.books = resp.data;
             })
         },
     }
