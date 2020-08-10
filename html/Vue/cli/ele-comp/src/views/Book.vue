@@ -6,7 +6,7 @@
                 <td>图书名称</td>
                 <td>作者</td>
             </tr>
-            <tr v-for="book in books" :key="book">
+            <tr v-for="book in books" :key="book.id">
                 <td>{{book.id}}</td>
                 <td>{{book.name}}</td>
                 <td>{{book.author}}</td>
